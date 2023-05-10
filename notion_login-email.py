@@ -24,7 +24,7 @@ async def run(playwright: Playwright) -> None:
     await page.get_by_placeholder("Enter your email address...").fill("lemisily@gmail.com")
     await page.get_by_placeholder("Enter your email address...").press("Enter")
     await page.get_by_placeholder("Enter your password...").click()
-    await page.get_by_placeholder("Enter your password...").fill("Nj2546#$Neo%")
+    await page.get_by_placeholder("Enter your password...").fill("***")
     await page.get_by_placeholder("Enter your password...").press("Enter")
 
     # ---------------------
