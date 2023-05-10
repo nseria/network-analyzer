@@ -17,7 +17,7 @@ async def run(playwright: Playwright) -> None:
     page = await browser.new_page()
 
     # ---------------------
-    sys.stdout = open('login-apple.txt', 'w')
+    sys.stdout = open('./txt_storage/login-apple.txt', 'w')
 
     page.on("request", lambda request: print(">>", request.method, request.url))
     # page.on("request", lambda request: print(">>", request.headers_array(), request.method, request.url))

@@ -62,9 +62,9 @@ def make_path_list(txt_file):
     # return value is "simple list"
     return path_list(parse_url(read_textfile(open(txt_file))))
 
-# print(type_countlist(make_netloc_list(txt_file)))
-# print(type_countlist(make_path_list(txt_file)))
 
+# make dataframe of netloc and path
+# more options will be added soon
 df_netloc = pd.DataFrame(type_countlist(make_netloc_list(txt_file)).items(), columns=['netloc', 'count'])
 df_path = pd.DataFrame(type_countlist(make_path_list(txt_file)).items(), columns=['path', 'count'])
 print(df_netloc)
@@ -72,7 +72,4 @@ print(df_path)
 
 df_netloc.to_csv(txt_file + '_netloc.csv', index=False)
 df_path.to_csv(txt_file + '_path.csv', index=False)
-
-
-# print(netloc_list(parse_url(read_textfile(open('login-apple.txt')))))
 

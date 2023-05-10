@@ -3,6 +3,7 @@ import sys
 
 from playwright.async_api import Playwright, async_playwright
 
+# you should turn off two factor authentication setting in Google
 
 async def run(playwright: Playwright) -> None:
     browser = await playwright.firefox.launch(headless=False)
