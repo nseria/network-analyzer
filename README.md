@@ -5,9 +5,9 @@ This is a simple code for gathering network traffics from the actions done in us
 # Before start
 
 Make three folders:
-./txt_storage
-./pdf_storage
-./csv_storage
+* ./txt_storage
+* ./pdf_storage
+* ./csv_storage
 
 # Tools for analysis
 
