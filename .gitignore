@@ -1,0 +1,7 @@
+txt_storage/
+csv_storage/
+pdf_storage/
+analysis_tool/__pycache__/
+*.json
+*.txt
+*.csv

@@ -1,9 +1,6 @@
 from urllib import parse
 import pandas as pd
 
-# set text file that you want to work
-txt_file = input("Enter the text file name: ") + '.txt'
-
 # read text file and make it a list
 def read_textfile(txt_file):
     txt_list = txt_file.readlines()
@@ -64,12 +61,32 @@ def make_path_list(txt_file):
 
 
 # make dataframe of netloc and path
-# more options will be added soon
-df_netloc = pd.DataFrame(type_countlist(make_netloc_list(txt_file)).items(), columns=['netloc', 'count'])
-df_path = pd.DataFrame(type_countlist(make_path_list(txt_file)).items(), columns=['path', 'count'])
-print(df_netloc)
-print(df_path)
+def http_parser(txt_file_name):
+    txt_file = "./../txt_storage/" + txt_file_name + ".txt"
 
-df_netloc.to_csv(txt_file + '_netloc.csv', index=False)
-df_path.to_csv(txt_file + '_path.csv', index=False)
+    df_netloc = pd.DataFrame(type_countlist(make_netloc_list(txt_file)).items(), columns=['netloc', 'count'])
+    df_path = pd.DataFrame(type_countlist(make_path_list(txt_file)).items(), columns=['path', 'count'])
 
+    df_netloc.to_csv('./../csv_storage/' + txt_file_name + '_netloc.csv', index=False)
+    df_path.to_csv('./../csv_storage/' + txt_file_name + '_path.csv', index=False)
+
+    print("----------------------------------------")
+    print("Http parsing to get [netloc] and [path] for" + txt_file_name + " is done.")
+    print("csv files are saved in ./../csv_storage/" + txt_file_name + "_netloc.csv and " + txt_file_name + "_path.csv")
+    print("----------------------------------------")
+
+def main():
+    http_parser("login-email")
+    http_parser("login-google")
+    http_parser("login-apple")
+    http_parser("login-status")
+    http_parser("using_ai")
+    http_parser("upload_pdf")
+    http_parser("download_pdf")
+    http_parser("export_pdf")
+    http_parser("integration_googlemap")
+    http_parser("integration_googledrive")
+    http_parser("integration_onedrive")
+    http_parser("integration_zoom")
+
+main()

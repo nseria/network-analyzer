@@ -1,13 +1,37 @@
 # Network analyzer for Notion
 
-I just make this code for practice.
+This is a simple code for gathering network traffics from the actions done in using Notion service.
 
-login-email: test for general login
+# Tools for analysis
 
-login-google: use google login
+Analysis is done in three steps:
 
-login-apple: use apple id login
+1. Analyze request and response data and sort them → http_parser.py
+2. Collect tags and categorize them according to the attributes → tag_collector.py
+3. Make a privacy report of your actions done in Notion →privacy_report
 
-# Http parser
+You can check **how** Notion collects your data and **what** data Notion collects through this simple test.
 
-Use this code as an analyzer for the output txt file of the py codes.
+### http_parser.py
+
+Parse the HTTP request and response data. Extract netloc and path data.
+
+### tag_collector.py
+
+Analysis of the parsed data and organize it.
+
+You can check how I contruct the codes just by reading the simple python codes.
+
+### privacy_report.py
+
+Generate a simple report in markdown style.
+
+# Example report
+
+demo_privacy_report.md is the example report for my case.
+
+# How to use
+
+Check the individual .py analyzer file.
+
+I wrote everything inside codes so that everyone can use easily.
