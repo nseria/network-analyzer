@@ -2,6 +2,7 @@ txt_storage/
 csv_storage/
 pdf_storage/
 analysis_tool/__pycache__/
+txt_storage/login-email.txt
 *.json
 *.txt
 *.csv
