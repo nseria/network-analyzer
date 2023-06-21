@@ -2,6 +2,13 @@
 
 This is a simple code for gathering network traffics from the actions done in using Notion service.
 
+# Before start
+
+Make three folders:
+./txt_storage
+./pdf_storage
+./csv_storage
+
 # Tools for analysis
 
 Analysis is done in three steps:
